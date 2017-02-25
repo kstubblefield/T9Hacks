@@ -11,6 +11,30 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 </style>
 <body class="w3-light-purple">
 
+
+<!-- PHP file -->
+<?php
+
+$servername = "localhost";
+$username = "mysql";
+$password = "";
+$dbname = "401(k)Fantasy";
+
+//create connection
+$conn = new mysql($servername, $username, $password, $dbname);
+//check connection
+if ($conn->connect_error)
+{	
+	die("Connection failed: " . $conn->connect_error);
+}
+$sql = "SELECT * FROM 401(k)Fantasy";
+$result = $conn->query($sql);
+
+echo "<br><br><br><br> id: " . $row["id"]. " - Stock: ". $row["Symbol"]. "<br>";
+
+$conn->close();
+?>
+
 <!-- Top container -->
 <div class="w3-container w3-top w3-black w3-large w3-padding" style="z-index:4">
   <button class="w3-button w3-hide-large w3-padding-0 w3-black w3-hover-none w3-hover-text-light-grey" onclick="w3_open();"><i class="fa fa-bars"></i>  Menu</button>
