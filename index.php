@@ -11,30 +11,6 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 </style>
 <body class="w3-light-purple">
 
-
-<!-- PHP file -->
-<?php
-
-$servername = "localhost";
-$username = "mysql";
-$password = "";
-$dbname = "401(k)Fantasy";
-
-//create connection
-$conn = new mysql($servername, $username, $password, $dbname);
-//check connection
-if ($conn->connect_error)
-{	
-	die("Connection failed: " . $conn->connect_error);
-}
-$sql = "SELECT * FROM 401(k)Fantasy";
-$result = $conn->query($sql);
-
-echo "<br><br><br><br> id: " . $row["id"]. " - Stock: ". $row["Symbol"]. "<br>";
-
-$conn->close();
-?>
-
 <!-- Top container -->
 <div class="w3-container w3-top w3-black w3-large w3-padding" style="z-index:4">
   <button class="w3-button w3-hide-large w3-padding-0 w3-black w3-hover-none w3-hover-text-light-grey" onclick="w3_open();"><i class="fa fa-bars"></i>  Menu</button>
@@ -81,7 +57,52 @@ $conn->close();
   <header class="w3-container" style="padding-top:22px">
     <h5><b><i class="fa fa-dashboard"></i> My Dashboard</b></h5>
   </header>
+  <div class="w3-row-padding w3-margin-bottom">
+    <div class="w3-quarter">
+		<?php
 
+		//require 'yahoo-finance -api/lib/YahooFinance/YahooFinance.php';
+
+		//$yf = new YahooFinance;
+		//$quote = json_decode($yf ->getQuotes(array()));
+
+		$servername = "localhost";
+		$username = "root";
+		$password = "";
+		$dbname = "401kfantasy";
+
+		//create connection
+		$conn = new mysqli($servername, $username, $password, $dbname);
+		//check connection
+		if ($conn->connect_error)
+		{	
+			die("Connection failed: " . $conn->connect_error);
+		}
+		$sql = "SELECT * FROM yahooData";
+		$result = $conn->query($sql);
+
+		if ($result->num_rows > 0)
+		{ 
+			echo "<table><tr><th> ID </th><th> Symbol </th><th> Company Name </th><th> Last Price </th><th> Industry </th><th> Type </th><th> Exchange </th></tr>";
+			//output data of each row
+			while($row = $result->fetch_assoc())
+			{
+				echo "<tr><td>" . $row["id"]. "</td><td>". $row["Symbol"]. "</td><td>". $row["CompanyName"]. "<br>";
+				echo "</td><td>". $row["LastPrice"]. "</td><td>". $row["Industry"]. "</td><td>". $row["Type"]. "<br>";
+				echo "</td><td>". $row["Exchange"]. "<br>";
+			}
+			echo "</table>";
+		}
+		else
+		{
+			echo "0 results";
+		}
+
+		$conn->close();
+
+		?>
+      </div>
+    </div>
   <div class="w3-row-padding w3-margin-bottom">
     <div class="w3-quarter">
       <div class="w3-container w3-red w3-padding-16">
@@ -125,7 +146,7 @@ $conn->close();
     </div>
   </div>
 
-  <div class="w3-container w3-section">
+<!--   <div class="w3-container w3-section">
     <div class="w3-row-padding" style="margin:0 -16px">
       <div class="w3-third">
         <h5>Regions</h5>
@@ -173,7 +194,7 @@ $conn->close();
       </div>
     </div>
   </div>
-  <hr>
+  <hr> -->
   <div class="w3-container">
     <h5>General Stats</h5>
     <p>New Visitors</p>
@@ -193,7 +214,7 @@ $conn->close();
   </div>
   <hr>
 
-  <div class="w3-container">
+ <!--  <div class="w3-container">
     <h5>Countries</h5>
     <table class="w3-table w3-striped w3-bordered w3-border w3-hoverable w3-white">
       <tr>
@@ -244,9 +265,9 @@ $conn->close();
       </li>
     </ul>
   </div>
-  <hr>
+  <hr> -->
 
-  <div class="w3-container">
+ <!--  <div class="w3-container">
     <h5>Recent Comments</h5>
     <div class="w3-row">
       <div class="w3-col m2 text-center">
@@ -291,12 +312,12 @@ $conn->close();
         <p>Interests</p>
       </div>
     </div>
-  </div>
+  </div> -->
 
   <!-- Footer -->
   <footer class="w3-container w3-padding-16 w3-light-grey">
     <h4>FOOTER</h4>
-    <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+    <p>Powered by <a href="http://www.t9hacks.org/" target="_blank">http://www.t9hacks.org/</a></p>
   </footer>
 
   <!-- End page content -->
@@ -329,27 +350,3 @@ function w3_close() {
 
 </body>
 </html>
-
-
-<!-- comments 
-
-<html lang="en">
-
-<header>
-</header>
-
-<body>
-
-	<header1> 
-		My first PHP page
-	</header1>
-
-	<?php
-		echo "T9Hacks!";
-	?>
-
-</body>
-
-
-</html>
-/-->
