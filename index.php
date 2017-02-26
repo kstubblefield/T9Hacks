@@ -12,13 +12,13 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 <body class="w3-light-purple">
 
 <!-- Top container -->
-<div class="w3-container w3-top w3-black w3-large w3-padding" style="z-index:4">
+<div class="w3-container w3-top w3-deep-purple w3-large w3-padding" style="z-index:4">
   <button class="w3-button w3-hide-large w3-padding-0 w3-black w3-hover-none w3-hover-text-light-grey" onclick="w3_open();"><i class="fa fa-bars"></i>  Menu</button>
   <span class="w3-right">Logo</span>
 </div>
 
 <!-- Sidenav/menu -->
-<nav class="w3-sidenav w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidenav"><br>
+<nav class="w3-sidenav w3-collapse w3-deep-purple w3-animate-left" style="z-index:3;width:300px;" id="mySidenav"><br>
   <div class="w3-container w3-row">
     <div class="w3-col s4">
       <!--<img src="/w3images/avatar2.png" class="w3-circle w3-margin-right" style="width:46px">/-->
@@ -36,7 +36,7 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
     <h5>Dashboard</h5>
   </div>
   <a href="#" class="w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black" onclick="w3_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>  Close Menu</a>
-  <a href="#" class="w3-padding w3-purple"><i class="fa fa-user fa-fw"></i>  Overview</a>
+  <a href="#" class="w3-padding w3-light-grey"><i class="fa fa-user fa-fw"></i>  Overview</a>
   <a href="#" class="w3-padding"><i class="fa fa-money fa-fw"></i>  Real Portfolio</a>
   <a href="#" class="w3-padding"><i class="fa fa-globe fa-fw"></i>  Current Market</a>
   <a href="#" class="w3-padding"><i class="fa fa-bullseye fa-fw"></i> Investors Guide</a>
@@ -106,7 +106,7 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
     </div>
   <div class="w3-row-padding w3-margin-bottom">
     <div class="w3-quarter">
-      <div class="w3-container w3-red w3-padding-16">
+      <div class="w3-container w3-purple w3-padding-16">
         <div class="w3-left"><i class="fa fa-comment w3-xxxlarge"></i></div>
         <div class="w3-right">
           <h3>52</h3>
@@ -116,7 +116,7 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
       </div>
     </div>
     <div class="w3-quarter">
-      <div class="w3-container w3-blue w3-padding-16">
+      <div class="w3-container w3-indigo w3-padding-16">
         <div class="w3-left"><i class="fa fa-eye w3-xxxlarge"></i></div>
         <div class="w3-right">
           <h3>99</h3>
@@ -136,7 +136,7 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
       </div>
     </div>
     <div class="w3-quarter">
-      <div class="w3-container w3-purple w3-text-white w3-padding-16">
+      <div class="w3-container w3-light-blue w3-text-white w3-padding-16">
         <div class="w3-left"><i class="fa fa-users w3-xxxlarge"></i></div>
         <div class="w3-right">
           <h3>50</h3>
@@ -316,8 +316,8 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
   </div> -->
 
   <!-- Footer -->
-  <footer class="w3-container w3-padding-16 w3-light-grey">
-    <h4>FOOTER</h4>
+  <footer class="w3-container w3-padding-16 w3-deep-purple">
+    <h4>HOSTED BY</h4>
     <p>Powered by <a href="http://www.t9hacks.org/" target="_blank">http://www.t9hacks.org/</a></p>
   </footer>
 
