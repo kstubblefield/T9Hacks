@@ -21,10 +21,11 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 <nav class="w3-sidenav w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidenav"><br>
   <div class="w3-container w3-row">
     <div class="w3-col s4">
-      <img src="/w3images/avatar2.png" class="w3-circle w3-margin-right" style="width:46px">
+      <!--<img src="/w3images/avatar2.png" class="w3-circle w3-margin-right" style="width:46px">/-->
+       <a href="#"><i class="fa fa-user fa-fw"></i></a>
     </div>
     <div class="w3-col s8">
-      <span>Welcome, <strong>Mike</strong></span><br>
+      <span>Welcome, <strong>Lady Jane</strong></span><br>
       <a href="#" class="w3-hover-none w3-hover-text-red w3-show-inline-block"><i class="fa fa-envelope"></i></a>
       <a href="#" class="w3-hover-none w3-hover-text-green w3-show-inline-block"><i class="fa fa-user"></i></a>
       <a href="#" class="w3-hover-none w3-hover-text-blue w3-show-inline-block"><i class="fa fa-cog"></i></a>
@@ -35,7 +36,7 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
     <h5>Dashboard</h5>
   </div>
   <a href="#" class="w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black" onclick="w3_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>  Close Menu</a>
-  <a href="#" class="w3-padding w3-blue"><i class="fa fa-user fa-fw"></i>  Overview</a>
+  <a href="#" class="w3-padding w3-purple"><i class="fa fa-user fa-fw"></i>  Overview</a>
   <a href="#" class="w3-padding"><i class="fa fa-money fa-fw"></i>  Real Portfolio</a>
   <a href="#" class="w3-padding"><i class="fa fa-globe fa-fw"></i>  Current Market</a>
   <a href="#" class="w3-padding"><i class="fa fa-bullseye fa-fw"></i> Investors Guide</a>
@@ -196,20 +197,20 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
   </div>
   <hr> -->
   <div class="w3-container">
-    <h5>General Stats</h5>
-    <p>New Visitors</p>
+    <h5>Current Statistics</h5>
+    <p>Real Portfolio Growth</p>
     <div class="w3-grey">
-      <div class="w3-container w3-center w3-padding w3-green" style="width:25%">+25%</div>
+      <div class="w3-container w3-center w3-padding w3-deep-purple" style="width:28%">+28%</div>
     </div>
 
-    <p>New Users</p>
+    <p>Fantasy Portfolio Growth</p>
     <div class="w3-grey">
-      <div class="w3-container w3-center w3-padding w3-orange" style="width:50%">50%</div>
+      <div class="w3-container w3-center w3-padding w3-purple" style="width:64%">64%</div>
     </div>
 
-    <p>Bounce Rate</p>
+    <p>Difference Between the Portfolios</p>
     <div class="w3-grey">
-      <div class="w3-container w3-center w3-padding w3-red" style="width:75%">75%</div>
+      <div class="w3-container w3-center w3-padding w3-indigo" style="width:36%">36%</div>
     </div>
   </div>
   <hr>
