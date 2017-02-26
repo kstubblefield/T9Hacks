@@ -35,13 +35,13 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
     <h5>Dashboard</h5>
   </div>
   <a href="#" class="w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black" onclick="w3_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>  Close Menu</a>
-  <a href="#" class="w3-padding w3-blue"><i class="fa fa-users fa-fw"></i>  Overview</a>
-  <a href="#" class="w3-padding"><i class="fa fa-eye fa-fw"></i>  Views</a>
-  <a href="#" class="w3-padding"><i class="fa fa-users fa-fw"></i>  Traffic</a>
-  <a href="#" class="w3-padding"><i class="fa fa-bullseye fa-fw"></i>  Geo</a>
-  <a href="#" class="w3-padding"><i class="fa fa-diamond fa-fw"></i>  Orders</a>
-  <a href="#" class="w3-padding"><i class="fa fa-bell fa-fw"></i>  News</a>
-  <a href="#" class="w3-padding"><i class="fa fa-bank fa-fw"></i>  General</a>
+  <a href="#" class="w3-padding w3-blue"><i class="fa fa-user fa-fw"></i>  Overview</a>
+  <a href="#" class="w3-padding"><i class="fa fa-money fa-fw"></i>  Real Portfolio</a>
+  <a href="#" class="w3-padding"><i class="fa fa-globe fa-fw"></i>  Current Market</a>
+  <a href="#" class="w3-padding"><i class="fa fa-bullseye fa-fw"></i> Investors Guide</a>
+  <a href="#" class="w3-padding"><i class="fa fa-line-chart fa-fw"></i>  Research and Trends</a>
+  <a href="#" class="w3-padding"><i class="fa fa-bell fa-fw"></i>  Financial News</a>
+  <a href="#" class="w3-padding"><i class="fa fa-gamepad fa-fw"></i>  Fantasy Portfolio</a>
   <a href="#" class="w3-padding"><i class="fa fa-history fa-fw"></i>  History</a>
   <a href="#" class="w3-padding"><i class="fa fa-cog fa-fw"></i>  Settings</a><br><br>
 </nav>
