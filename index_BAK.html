@@ -11,43 +11,6 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 </style>
 <body class="w3-light-purple">
 
-
-<!-- PHP file -->
-<?php
-
-require 'yahoo-finance -api/lib/YahooFinance/YahooFinance.php';
-
-$yf = new YahooFinance;
-$quote = json_decode($yf ->getQuotes(array()))
-
-$servername = "localhost";
-$username = "mysql";
-$password = "";
-$dbname = "401(k)Fantasy";
-
-//create connection
-$conn = new mysql($servername, $username, $password, $dbname);
-//check connection
-if ($conn->connect_error)
-{	
-	die("Connection failed: " . $conn->connect_error);
-}
-$sql = "SELECT * FROM 401(k)Fantasy";
-$result = $conn->query($sql);
-
-if ($results -> num_rows >0)
-{ 
-	//output data of each row
-	while($row = $result -> fetch_assoc())
-	{
-		echo "<br><br><br><br> id: ". $row["id"]. " - Stock: ". $row["Symbol"]. - Company Name: ". $row["CompanyName"]. <br>;
-		echo "Last Price: ". $row["last Price"]. " - Industry: ". $row["Industry"]. - Type: ". $row["Type"]. <br>;
-		echo "" Exchange: ". $row["Exchange"]. <br>;
-	}
-
-$conn->close();
-?>
-
 <!-- Top container -->
 <div class="w3-container w3-top w3-black w3-large w3-padding" style="z-index:4">
   <button class="w3-button w3-hide-large w3-padding-0 w3-black w3-hover-none w3-hover-text-light-grey" onclick="w3_open();"><i class="fa fa-bars"></i>  Menu</button>
@@ -366,3 +329,39 @@ function w3_close() {
 
 </html>
 /-->
+
+      <?php
+      require 'yahoo-finance-api/lib/YahooFinance/YahooFinance.php';
+      $yf = new YahooFinance;
+      $quote = json_decode($yf->getQuotes(array('IDA', 'MCEP', 'UWTI')));*/
+      ?>
+
+      <table>
+        <tr>
+          <td>Symbol</td>
+          <td>Price</td>
+          <td>Fifty Day</td>
+          <td>% Change</td>
+        </tr>
+
+        <?php
+/*        foreach($quote->query->results->quote as $stock)
+        {
+          if (substr($stock->PercentChange, 0, 1) === '+')
+          {
+            $color = "green";
+          }
+          else
+          {
+            $color = "red";
+          }
+          echo '<tr>';
+          echo '<td>' . $stock->symbol . '</td>';
+          echo '<td>' . number_format((float)$stock->LastTradePriceOnly, 2, '.', '') . '</td>';
+          echo '<td>' . number_format((float)$stock->FiftydayMovingAverage, 2, '.', '') . '</td>';
+          echo '<td style="color:'.$color.'">' . $stock->PercentChange . '</td>';
+          echo '</tr>';*/
+        }
+        ?>
+
+      </table>
